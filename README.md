@@ -33,7 +33,16 @@ Comic2Story is a multimodal AI application that transforms comics into narrative
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/
-cd 
+git clone https://github.com/parthiisc/DA2550_Grp13.git
+cd DA2550_Grp1
+```
+2. **Create virtual environment and install dependencies**
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+--To be continued..
+
 
 
