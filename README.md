@@ -1,4 +1,4 @@
-# ComicVerse: AI Comic Story & Audio Lab
+# ComicVerse: A Multimodal Deep Learning System for Comic Narration and Audiobook Generation
 
 ComicVerse is a multimodal deep learning application that transforms comic PDFs into engaging narrative stories and audiobooks. Powered by OCR, vision-language models, and neural TTS, ComicVerse enables users to upload comics, select storytelling style, generate audio, and interact with an AI chatbot—all through a modern Streamlit web interface.
 
