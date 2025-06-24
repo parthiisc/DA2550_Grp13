@@ -53,6 +53,8 @@ pip install -r requirements.txt
     - Download from: https://github.com/tesseract-ocr/tesseract/wiki#windows
     - Add `C:\Program Files\Tesseract-OCR` to your PATH.
 
+> **Note:** If you installed Poppler in a different location, update the `poppler_path` argument in the `pdf_to_images` function inside `comicToStory_audio_batching.py` to match your Poppler `bin` directory (e.g., `C:\poppler-23.11.0\Library\bin`).
+
 ### 4. Set up OpenAI API Key
 - Create a `.env` file in the project root:
   ```
