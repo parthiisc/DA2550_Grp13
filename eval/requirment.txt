@@ -1,0 +1,10 @@
+pandas
+numpy
+textstat
+bert-score
+sentence-transformers
+scikit-learn
+openai
+python-dotenv
+pdf2image
+Pillow
