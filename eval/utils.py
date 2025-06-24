@@ -132,3 +132,28 @@ def describe_comic_pages_with_gpt4o(
 
 
 
+# API call wrapper to handle rate limits
+def safe_openai_call(*args, **kwargs):
+    while True:
+        try:
+            return openai.chat.completions.create(*args, **kwargs)
+        except openai.RateLimitError as e:
+            print("Rate limit hit. Waiting 5 seconds...")
+            time.sleep(5)
+
+# API call to compress iamge if exceed limit 
+def compress_image(image_path, max_width=1024, quality=70):
+    img = Image.open(image_path)
+    # Resize if wider than max_width
+    if img.width > max_width:
+        ratio = max_width / img.width
+        new_height = int(img.height * ratio)
+        img = img.resize((max_width, new_height), Image.LANCZOS)
+    # Convert to JPEG in memory
+    buffer = io.BytesIO()
+    img = img.convert("RGB")  # JPEG doesn't support alpha
+    img.save(buffer, format="JPEG", quality=quality)
+    buffer.seek(0)
+    img_b64 = base64.b64encode(buffer.read()).decode("utf-8")
+    return img_b64
+
