@@ -84,8 +84,29 @@ streamlit run app.py
 
 ---
 
+## 📊 Evaluation Suite (`eval` folder)
+
+The `eval` folder contains scripts and sample comics for evaluating the ComicVerse pipeline:
+
+- **Sample Comics:** PDF files in `eval/comic/` for testing and benchmarking.
+- **Evaluation Scripts:**
+  - `main.py`: Entry point for running the evaluation pipeline on sample comics.
+  - `pipeline.py`, `utils.py`: Core logic for PDF-to-story conversion and supporting utilities.
+  - `eval.py`: Computes metrics such as readability, BERTScore, and cosine similarity between generated stories.
+
+### How to Use
+1. Place your comic PDFs in `eval/comic/` (some samples are already included).
+2. Run the evaluation pipeline:
+   ```bash
+   cd eval
+   python main.py
+   ```
+3. The scripts will process the comics, generate stories, and output evaluation metrics for comparison and analysis.
+
+---
+
 ## 📄 License
-This project is for educational use
+This project is for educational use only.
 
 
 

@@ -4,3 +4,9 @@ openai
 pdf2image
 pytesseract
 Pillow
+pandas
+numpy
+textstat
+bert-score
+sentence-transformers
+scikit-learn
